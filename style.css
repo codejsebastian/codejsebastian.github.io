@@ -1,0 +1,126 @@
+/* Variables. */
+:root {
+    --bg_main: #0a1f44;
+    --text_light: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+}
+/* Resetear estilos. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+/* Body. */
+body {
+    font: 1rem/1.3 "Roboto", sans-serif;
+    background: var(--bg_main);
+    color: var(--text_dark);
+    padding: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Header. */
+.heading {
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+    padding: 0 0 30px 0;
+    color: var(--text_light);
+}
+/* Main. */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+/* Sección de búsqueda. */
+.search form {
+    display: flex;
+    align-items: center;
+}
+
+button,
+input {
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--text_light);
+}
+
+.search form input {
+    font-size: 2rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border: 0px;
+    border-bottom: 1px solid;
+
+    color: var(--text_light);
+}
+.search form input::placeholder {
+    color: currentColor; 
+}
+
+.search form button {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: var(--red);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    text-transform: uppercase;
+}
+.search form button:hover {
+    background: var(--darkred);
+}
+
+/* Sección de resultados. */
+#results {
+    margin-top: 32px;
+}
+#cards {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.card {
+    width: 250px;
+    height: 350px;
+    padding: 32px;
+    border-radius: 20px;
+    background-color: var(--text_light);
+    color: var(--text_med);
+}
+.card .city-name sup {
+    font-size: 1rem;
+    padding: 0.2em 0.4em;
+    margin-left: 0.5em;
+    border-radius: 30px;
+    color: var(--text_light);
+    background: var(--orange);
+    text-transform: lowercase;
+}
+.card .city-temp {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 32px;
+    color: var(--text_dark);
+    transform: scale(1, 1.5);
+}
+.card .city-temp sup {
+    font-size: 2rem;
+}
+.card figcaption {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
