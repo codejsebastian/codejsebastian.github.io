@@ -1,8 +1,10 @@
 "use strict"
 document.getElementById("search-button").addEventListener("click", consultarAPI);
 
-function consultarAPI() {
+function consultarAPI(event) {
     let xhr, apiKey, city, url;
+    
+    event.preventDefault();
     
     city = document.getElementById("place-input").value; 
     apiKey = "e53011891a584287b4eb3ab0233ac000";
